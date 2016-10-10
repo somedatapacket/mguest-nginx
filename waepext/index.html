@@ -1,0 +1,139 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+            body {
+                padding-bottom: 20px;
+            }
+
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script>
+function submitAction(){
+      var link = document.location.href;
+      var searchString = "redirect=";
+      var equalIndex = link.indexOf(searchString);
+      var redirectUrl = "";
+
+      if (document.forms[0].action == "") {
+      var url = window.location.href;
+      var args = new Object();
+      var query = location.search.substring(1);
+      var pairs = query.split("&");
+          for(var i=0;i<pairs.length;i++){
+              var pos = pairs[i].indexOf('=');
+              if(pos == -1) continue;
+              var argname = pairs[i].substring(0,pos);
+              var value = pairs[i].substring(pos+1);
+              args[argname] = unescape(value);
+          }
+          document.forms[0].action = args.switch_url;
+      }
+      if(equalIndex >= 0) {
+            equalIndex += searchString.length;
+            redirectUrl = "";
+            redirectUrl += link.substring(equalIndex);
+      }
+      if(redirectUrl.length > 255)
+      redirectUrl = redirectUrl.substring(0,255);
+      document.forms[0].redirect_url.value = redirectUrl;
+      document.forms[0].buttonClicked.value = 4;
+      document.forms[0].submit();
+}
+
+function reject()
+{
+	alert("You will not be able to access the system!");
+}
+
+
+function loadAction(){
+      var url = window.location.href;
+      var args = new Object();
+      var query = location.search.substring(1);
+      var pairs = query.split("&");
+      for(var i=0;i<pairs.length;i++){
+          var pos = pairs[i].indexOf('=');
+          if(pos == -1) continue;
+          var argname = pairs[i].substring(0,pos);
+          var value = pairs[i].substring(pos+1);
+          args[argname] = unescape(value);
+      }
+      document.forms[0].action = args.switch_url;
+
+}
+
+    </script>
+</head>
+<body onload="loadAction();">
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>MGuest WiFi Network</h1>
+        <h3>Our guest network provides basic internet access for the public good. Enter your email address and accept
+            the terms of use to connect.</h3>
+        <p>Are you a member of the U-M community? <a href="http://its.umich.edu/wifisetuptool">Configure your device</a>
+            to use MWireless for full network access.</p>
+    </div>
+</div>
+<div class="container">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1">Terms of Use</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body"><p>MGuest is a Wi-Fi network for University of Michigan guests. This network is
+                    allotted a limited share of network resources, does not provide encryption, is treated as an
+                    external network, and is available on a best effort basis. Certain U-M resources, such as library
+                    journals, are not accessible from this network.</p>
+                    <p>MGuest is a part of the U-M IT environment. By using this resource, you agree to abide by the
+                        highest standards of responsibility. You are required to comply with all University policies,
+                        state, and federal laws concerning appropriate use of information technology. Non-compliance is
+                        considered a serious breach of community standards and may result in disciplinary or legal
+                        action.</p>
+                    <p>For U-M students, faculty, staff and sponsored guests, eduroam delivers better performance,
+                        allows mobile devices to stay connected, provides encryption, and allows access to all U-M
+                        resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <form method="post"><input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0"> <input
+                TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE=""> <input TYPE="hidden"
+                                                                                              NAME="err_flag" SIZE="16"
+                                                                                              MAXLENGTH="15" value="0">
+            <p><input type="email" name="email" size="45" maxlength="63" placeholder="Email address"></p>
+            <p><input type="button" name="Submit" value="Accept" class="button" onclick="submitAction();"></p>
+        </form>
+    </div>
+    <hr>
+    <footer>
+        <p>For assistance, please contact 4-HELP.</p>
+        <p>&copy; Regents of the University of Michigan</p>
+    </footer>
+</div> <!-- /container -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
