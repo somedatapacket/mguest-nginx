@@ -4,7 +4,26 @@
    Author's custom styles
    ========================================================================== */
 
+a {
+	color: #587abc;
+	
+}
 
+a:hover, a:focus {
+    color: #465d85;
+    text-decoration: underline
+}
+
+
+body {
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.jumbotron {
+	background-color: #00274c;
+	color: #eff0f1;
+}
 
 
 
