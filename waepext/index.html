@@ -6,24 +6,18 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-            body {
-                padding-bottom: 20px;
-            }
-
-    </style>
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1"/>
+    <title>MGuest WiFi Network</title>
+    <meta name="description" content="MGuest WiFi Network Login"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-	<script>
+    <script>
 
 	function submitAction(){
 	      var link = document.location.href;
@@ -62,7 +56,6 @@
 		alert("No worries! Please remove the MGuest network from your device's preferred networks so you do not continue to be presented with these terms.");
 	}
 
-
 	function loadAction(){
 	      var url = window.location.href;
 	      var args = new Object();
@@ -76,19 +69,22 @@
 	          args[argname] = unescape(value);
 	      }
 	      document.forms[0].action = args.switch_url;
-
 	}
 
-	</script>
+    </script>
 </head>
 <body onload="loadAction();">
-	<form method="post"> <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0"> <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE=""> <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
+	<form method="post">
+		<input TYPE="hidden" NAME="buttonClicked" value="0"/>
+		<input TYPE="hidden" NAME="redirect_url" VALUE=""/>
+		<input TYPE="hidden" NAME="err_flag" value="0"/>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-		<img src="/img/signature-marketing-white.png" class="img-responsive">
+		<img src="/img/signature-marketing-white.png" class="img-responsive" alt="U-M Information and Technology Services"/>
 	    <h1>MGuest WiFi Network</h1>
-		<p>MGuest is a wireless network service that provides basic internet access for use by University of Michigan guests. To access the network, review and agree to the terms of use.</p>
+		<p>MGuest is a wireless network service that provides basic internet access for use by University of Michigan guests. 
+		To access the network, review and agree to the terms of use.</p>
     </div>
 </div>
 <div class="container">
@@ -100,26 +96,31 @@
                 </div>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body"><p>MGuest is a WiFi network for University of Michigan guests. This network is
-                    allotted a limited share of network resources, does not provide encryption, is treated as an
-                    external network, and is available on a best effort basis. The university does not guarantee the privacy, confidentiality, or security of your communications while using this service. It is recommended not to use MGuest to send and receive personal or sensitive information. Certain U-M resources, such as library
-                    journals, are not accessible from this network.</p>
-                    <p>MGuest is a part of the U-M IT environment. By using this resource, you agree to abide by the
-                        highest standards of responsibility. You are required to comply with all University policies,
-                        state, and federal laws concerning appropriate use of information technology. Non-compliance is
-                        considered a serious breach of community standards and may result in disciplinary or legal
-                        action.</p>
-                    <p>For U-M students, faculty, staff, sponsored guests, and users from participating educational institutions, MWireless and eduroam deliver better performance,
-                        allow mobile devices to stay connected, provide encryption, and allow access to all U-M
-                        resources. The guest network is not intended for use by University faculty, staff, or students when engaging in university-related academic or business activities.</p>
+                <div class="panel-body">
+                    <p>MGuest is a WiFi network for University of Michigan guests. This network is 
+                    allotted a limited share of network resources, does not provide encryption, is treated as an 
+                    external network, and is available on a best effort basis. The university does not guarantee the 
+                    privacy, confidentiality, or security of your communications while using this service. It is recommended 
+                    not to use MGuest to send and receive personal or sensitive information. Certain <span class="nobr">U-M</span> 
+                    resources, such as library journals, are not accessible from this network.</p>
+                    <p>MGuest is a part of the <span class="nobr">U-M</span> IT environment. By using this resource, you 
+                    agree to abide by the highest standards of responsibility. You are required to comply with all University 
+                    policies, state, and federal laws concerning appropriate use of information technology. Non-compliance is 
+                    considered a serious breach of community standards and may result in disciplinary or legal action.</p>
+                    <p>For <span class="nobr">U-M</span> students, faculty, staff, sponsored guests, and users from participating 
+                    educational institutions, MWireless and eduroam deliver better performance, allow mobile devices to stay 
+                    connected, provide encryption, and allow access to all <span class="nobr">U-M</span> resources. The guest 
+                    network is not intended for use by University faculty, staff, or students when engaging in university-related 
+                    academic or business activities.</p>
                 </div>
             </div>
         </div>
     </div>
-<p><input type="button" name="Submit" value="Agree & Connect" class="button blue-button" onclick="submitAction();"></p>
+<p><input type="button" name="Submit" value="Agree & Connect" class="button blue-button" onclick="submitAction();"/></p>
     <hr>
     <footer>
-        <p>For assistance, please contact the ITS Service Center (<a href="tel:734-764-4357">734-764-4357</a>). Are you a member of the U-M community? Configure your device to use MWireless or eduroam for full network access.</p>
+        <p>For assistance, please contact the ITS Service Center (<a href="tel:734-764-4357">734-764-4357</a>). Are you a member of 
+        the <span class="nobr">U-M</span> community? Configure your device to use MWireless or eduroam for full network access.</p>
         <p>&copy; <script>var year = new Date();document.write(year.getFullYear())</script> Regents of the University of Michigan</p>
     </footer>
 </div> <!-- /container -->
