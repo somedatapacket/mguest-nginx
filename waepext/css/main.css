@@ -15,6 +15,10 @@ body {
 	overflow-y:scroll;
 }
 
+.container {
+	width:960px;
+}
+
 h1 {
 	font-size:36px;
 }
