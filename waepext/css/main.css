@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+	width:960px;
 	max-width:100%;
 }
 
